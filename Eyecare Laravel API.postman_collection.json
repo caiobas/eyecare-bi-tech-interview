@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "383bc969-e74e-4895-889f-4e94cebc6109",
+		"name": "Eyecare Laravel API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21071416"
+	},
+	"item": [
+		{
+			"name": "Listar pacientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/patients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"patients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar paciente",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"full_name\": \"Full Name\",\n    \"cpf\": \"12345678900\",\n    \"rg\": \"123456789\",\n    \"birthday\": \"10/10/2000\",\n    \"gender\": \"m\",\n    \"cell_phone\": \"11987654321\",\n    \"email\": \"email@email.com\",\n    \"description\": \"Et assumenda enim nulla illum omnis perferendis. Quo iure animi et. Praesentium dolores ea quia nobis vel doloremque. Totam suscipit dicta aut quo deserunt.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/patients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"patients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar paciente por CPF",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/patients/12345678900",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"patients",
+						"12345678900"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar paciente por CPF",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"full_name\": \"Full Name Changed\",\n    \"cpf\": \"12345678900\",\n    \"rg\": \"123456789\",\n    \"birthday\": \"11/11/2000\",\n    \"gender\": \"m\",\n    \"cell_phone\": \"11987654321\",\n    \"email\": \"email@email.com\",\n    \"description\": \"New Description\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/patients/12345678900",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"patients",
+						"12345678900"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar(soft) paciente por CPF",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/patients/12345678900",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"patients",
+						"12345678900"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
