@@ -1,27 +1,46 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import Vue from "vue";
+import VueRouter from "vue-router";
+import HomeView from "../views/HomeView.vue";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   base: import.meta.env.BASE_URL,
   routes: [
     {
-      path: '/',
-      name: 'home',
-      component: HomeView
+      path: "/",
+      redirect: "/patients",
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
-    }
-  ]
-})
+      path: "/patients",
+      name: "patients",
+      component: () => import("../views/Patients/Index.vue"),
+      redirect: "/patients/list",
+      children: [
+        {
+          path: "/patients/list",
+          name: "list-patients",
+          component: () => import("../views/Patients/ListPatients.vue"),
+        },
+        {
+          path: "/patients/form/create",
+          name: "form-create-patients",
+          component: () => import("../views/Patients/FormPatients.vue"),
+        },
+        {
+          path: "/patients/form/edit",
+          name: "form-edit-patients",
+          component: () => import("../views/Patients/FormPatients.vue"),
+        },
+        {
+          path: "/patients/form/details",
+          name: "form-details-patients",
+          component: () => import("../views/Patients/FormPatients.vue"),
+        },
+      ],
+    },
+  ],
+});
 
-export default router
+export default router;
