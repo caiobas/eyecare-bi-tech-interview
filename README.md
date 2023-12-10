@@ -1,25 +1,25 @@
-# Desafio para a vaga de Fullstack Developer (PHP/Laravel e VueJS)
+# Tech Challenge for Full Stack Developer position (PHP/Laravel e VueJS)
 
-O projeto consiste de uma aplicação CRUD de cadastro de pacientes.
+The project consists of a CRUD patient registration application.
 
-## Configuração do projeto
+## Project configuration
 
 ### Backend
 
-- Copie o arquivo `.env.example` para o arquivo `.env`.
-- Abra um terminal na pasta 'php-laravel' e rode o comando `./vendor/bin/sail up`.
-- Abra um terminal na pasta 'php-laravel' e rode as migrations com o comando `bash vendor/bin/sail artisan migrate`.
-- Opcional: rode `bash vendor/bin/sail artisan db:seed` para popular o banco de dados.
-- Backend deverá estar rodando no endereço http://localhost:8081.
+- Copy the `.env.example` file to the `.env` file.
+- Open a terminal in the 'php-laravel' folder and run the command `./vendor/bin/sail up`.
+- Open a terminal in the 'php-laravel' folder and run the migrations with the command `bash vendor/bin/sail artisan migrate`.
+- Optional: run `bash vendor/bin/sail artisan db:seed` to populate the database.
+- Backend should be running at http://localhost:8081.
 
 ### Frontend
 
-- Copie o arquivo `.env.example` para o arquivo `.env`.
-- Abra um terminal na pasta 'front-vuejs' e rode o comando `npm install` (node version: v17.9.1).
-- Rode o comando `npm run dev`.
-- Frontend deverá estar rodando no endereço http://localhost:5173.
+- Copy the `.env.example` file to the `.env` file.
+- Open a terminal in the 'front-vuejs' folder and run the `npm install` command (node ​​version: v17.9.1).
+- Run the `npm run dev` command.
+- Frontend must be running at http://localhost:5173.
 
-## Utilização
+## How to use
 
-- Para utilização dos endpoints apenas no backend utilize o arquivo com os endpoints configurados numa collection do postman na raíz do projeto.
-- Para utilização dos endpoints no frontend, siga o fluxo definido nas imagens da pasta 'images'.
+- To use the endpoints only in the backend, use the file with the endpoints configured in a postman collection at the root of the project.
+- To use endpoints in the frontend, follow the flow defined in the images in the 'images' folder.
